@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  osero:
+    build: ../src/osero/
+    ports:
+      - '3000:3000'
+      - '8080:80'
+    volumes:
+      - ../src/osero:/home/app/osero
+      - /home/app/osero/node_modules
